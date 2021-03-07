@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover In Hover Out jQuery Coding Dojo!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+                let nowyoudont;
+                let nowyouseeme;
+                $("img").hover(function () {
+                    nowyoudont = $(this).attr("data-alt-src");
+                    console.log('Hover Function Worked!')
+                    nowyouseeme = $(this).attr("src");
+                    $(this).attr("src", nowyoudont);
+                }, function () {
+                    $(this).attr("src", nowyouseeme);
+                });
+
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-image: url("cloud-bg.jpg");
+        }
+
+        h1 {
+            text-align: center;
+            color: Blue;
+            font-size: 35px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        img {
+            height: 300px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Coding Dojo-Hover In/Hover Out!</h1>
+    <hr>
+    <div class="container">
+        <img class="image1" src="img/Ninjas.png" data-alt-src="img/ninjaSmoke.jpg">
+        <img class="image2" src="img/Ninjas2.png" data-alt-src="img/ninjaSmoke.jpg">
+        <img class="image3" src="img/Ninjas3.png" data-alt-src="img/ninjaSmoke.jpg">
+        <img class="image4" src="img/Ninjas4.png" data-alt-src="img/ninjaSmoke.jpg">
+    </div>
+    <div class="container">
+        <img class="image8" src="img/Ninjas4.png" data-alt-src="img/ninjaSmoke.jpg">
+        <img class="image7" src="img/Ninjas3.png" data-alt-src="img/ninjaSmoke.jpg">
+        <img class="image6" src="img/Ninjas2.png" data-alt-src="img/ninjaSmoke.jpg">
+        <img class="image5" src="img/Ninjas.png" data-alt-src="img/ninjaSmoke.jpg">
+    </div>
+    <hr>
+</body>
+
+</html>
+</head>
+
+<body>
+
+</body>
+
+</html>
